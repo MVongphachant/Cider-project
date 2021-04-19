@@ -1,0 +1,37 @@
+<body>
+  <div *ngIf="!isLogin">
+    <form #authForm="ngForm" (ngSubmit)="onSignUp(authForm)">
+      <h2>Sign up</h2>
+      <mat-form-field>
+        <input matInput id="username" type="text" ngModel name="username" placeholder="Username" #username="ngModel" required max="10">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput id="email" type="email" ngModel name="email" placeholder="Email" #email="ngModel" required email>
+        <mat-error *ngIf="email.invalid">Please enter a valid Email</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput id="password" type="password" ngModel name="password" placeholder="Password (min=6 characters)" #password="ngModel" required minlength="6">
+        <mat-error *ngIf="password.invalid">Please enter a valid Password</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit" [disabled]="authForm.invalid">Sign up</button>
+      <div class="switch-form">or <a (click)="onSwitchForm()">Login</a></div>
+    </form>
+  </div>
+
+  <div>
+    <form #authForm="ngForm" (ngSubmit)="onLogin(authForm)">
+      <h2>Log in</h2>
+      <mat-form-field>
+        <input matInput id="email" type="email" ngModel name="email" placeholder="Email" #email="ngModel" required email>
+        <mat-error *ngIf="email.invalid">Please enter a valid Email</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput id="password" type="password" ngModel name="password" placeholder="Password (min=6 characters)" #password="ngModel" required minlength="6">
+        <mat-error *ngIf="password.invalid">Please enter a valid Password</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit" [disabled]="authForm.invalid">Login</button>
+      <div class="switch-form">or <a (click)="onSwitchForm()">Sign up</a></div>
+    </form>
+  </div>
+
+</body>
