@@ -14,12 +14,15 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './interceptors/auth-interceptor';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupLoginComponent,
-    ReviewFormComponent
+    ReviewFormComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { ReviewFormComponent } from './review-form/review-form.component';
     MatInputModule,
     MatMenuModule,
     MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

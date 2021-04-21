@@ -1,0 +1,128 @@
+nav {
+    display: flex;
+    /* flex-direction: row; */
+    border-bottom: 2.5px solid #eff1f3;
+    width: 100;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    height: 7vh;
+  }
+   
+  h1 {
+    color: #272727;
+    margin: 0;
+    font-weight: 550;
+    font-family: "Unica One", cursive;
+  }
+   
+  #logo {
+    font-size: 4.5vh;
+    color: #e3b23c;
+  }
+   
+  button {
+    border: none;
+    background-color: #ffffff;
+    color: #272727;
+    font-size: 20px;
+  }
+   
+  .menuitem {
+    font-size: 14px;
+  }
+   
+  .menuitem:hover {
+    color: #4a7856;
+  }
+   
+  input {
+    text-align: center;
+    border: none;
+    width: 80vw;
+    height: 100%;
+  }
+   
+  #searchbar {
+    /* padding: 7px 0px; */
+    height: 30px;
+    width: 100vw;
+    margin: 2px 0px;
+    border-bottom: 2.5px solid #eff1f3;
+    color: #272727;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  #searchbar button {
+    font-size: 16px;
+    padding: 0;
+    color: #eff1f3;
+  }
+   
+  #navlinks {
+    display: none;
+  }
+   
+  @media only screen and (min-width: 768px) {
+   
+    #logo {
+      padding-left: 3vw;
+      font-size: 3.5vh;
+    }
+   
+    h1 {
+      padding: 0px 25px;
+    }
+   
+    #navlinks {
+      display: flex;
+      width: 80vw;
+      justify-content: space-around;
+      padding-left: 250px;
+    }
+   
+    #navlinks a {
+      text-decoration: none;
+      color: #272727;
+    }
+   
+    #navlinks a:hover {
+      text-decoration: none;
+      color: #4a7856;
+      font-weight: 450;
+    }
+   
+    #matbutton {
+      display: none;
+    }
+   
+    a {
+      padding: 5px;
+      align-self: center;
+          border-radius: 5px;
+    }
+   
+    #login {
+      border: 1.5px solid #4a7856;
+    }
+   
+  #x:hover, #mag:hover {
+  color: #e3b23c;
+  }
+   
+    @media only screen and (min-width: 1030px) {
+   
+      #navlinks {
+        padding-left: 550px;
+      }
+   
+      #login {
+        border: 1.75px solid #4a7856;
+      }
+   
+    }
+  }
+  
