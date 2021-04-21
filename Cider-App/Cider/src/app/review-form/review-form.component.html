@@ -1,0 +1,7 @@
+<form #reviewForm="ngForm" (ngSubmit)="onSubmitReview(reviewForm)">
+  <label for="rating">Rating</label>
+  <input type="number" id="rating" name="rating" ngModel>
+  <label for="description">Description</label>
+  <textarea id="description" name="description" ngModel></textarea>
+  <button type="submit">Submit Review</button>
+</form>
