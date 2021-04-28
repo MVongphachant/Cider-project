@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-// import { faAppleAlt, faBars, faTimes, faSearch, fas } from '@fortawesome/free-solid-svg-icons';
+import { faAppleAlt, faBars, faTimes, faSearch, fas } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -9,11 +9,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 })
 export class NavigationBarComponent implements OnInit {
 
-  // faAppleAlt = faAppleAlt;
-  // faBars = faBars;
-  // faTimes = faTimes;
-  // faSearch = faSearch;
-
+  faAppleAlt = faAppleAlt;
+  faBars = faBars;
+  faTimes = faTimes;
+  faSearch = faSearch;
+  showFiller = false;
+ 
   searchdrop = false;
 
   constructor() { }
