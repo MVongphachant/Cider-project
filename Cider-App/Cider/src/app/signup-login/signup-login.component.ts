@@ -17,6 +17,7 @@ export class SignupLoginComponent {
       return;
     }
     this.authService.signupUser(form.value.username, form.value.email, form.value.password);
+    form.reset()
   }
 
   onLogin(form: NgForm) {
@@ -24,6 +25,7 @@ export class SignupLoginComponent {
       return;
     }
     this.authService.loginUser(form.value.email, form.value.password);
+    form.reset()
   }
 
   onSwitchForm() {

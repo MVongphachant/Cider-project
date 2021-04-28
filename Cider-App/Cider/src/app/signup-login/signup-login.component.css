@@ -1,7 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background-color: rgba(38, 53, 50, 0.8);
+  height: 100vh;
+  position: relative;
+}
+
+.main-container::before {
+  content: '';
+  background: url('../utilities/images/pexels-amanda-klamrowski-1400255.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
 form {
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 50px auto ;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  min-height: 40%;
+  margin: 0 auto;
   border: 3px solid grey;
+  padding: 2em;
 }
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 700;
+  text-align: center;
+  width: auto;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+input {
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  background-color: rgb(195, 219, 213);
+  color: rgb(116, 116, 116);
+  transition: background-color 0.5s ease;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgb(214, 214, 214);
+}
+
+.switch-form {
+  margin-top: 1em;
+}
+
+.switch-btn {
+  color: rgb(202, 74, 102);
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button {
+  letter-spacing: 1.3px;
+  cursor: pointer;
+}
+
+
