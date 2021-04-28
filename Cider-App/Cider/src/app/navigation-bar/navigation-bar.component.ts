@@ -13,6 +13,7 @@ export class NavigationBarComponent implements OnInit {
   faBars = faBars;
   faTimes = faTimes;
   faSearch = faSearch;
+  showFiller = false;
  
   searchdrop = false;
  

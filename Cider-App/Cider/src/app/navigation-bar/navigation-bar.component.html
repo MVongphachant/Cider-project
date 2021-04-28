@@ -1,16 +1,31 @@
 <nav>
 
-  <h1><fa-icon [icon]="faAppleAlt" id="logo"></fa-icon>inCider</h1>
+  <h1 routerLink="/home" routerLinkActive="active"><fa-icon [icon]="faAppleAlt" id="logo"></fa-icon>inCider</h1>
   <div id="navlinks">
     <a href="#Search" (click)="dropSearch()">Search</a>
-    <a href="#Featured">Featured</a>
+    <a routerLink="/first-component" routerLinkActive="active">Featured</a>
     <a href="#TopRated">Top Rated</a>
-    <a href="#Login" id="login">Login</a>
+    <a routerLink="/signup-login" routerLinkActive="active">Login</a>
   </div>
   <button id="matbutton" mat-button [matMenuTriggerFor]="menu">
     <fa-icon [icon]="faBars"></fa-icon>
   </button>
- 
+<!--  
+  <mat-drawer-container class="example-container" autosize> 
+        <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+    </div>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  </mat-drawer-container> -->
+
   <mat-menu #menu="matMenu">
     <button mat-menu-item class="menuitem">Login</button>
     <button mat-menu-item class="menuitem">Top Rated</button>
