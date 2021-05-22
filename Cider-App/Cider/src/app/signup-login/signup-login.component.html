@@ -1,23 +1,26 @@
 <body class="main-container">
 
-
-  <div class="form-wrap signup-wrap" *ngIf="!isLogin">
+  <div class="form-wrap" *ngIf="!isLogin">
+    <div class="overlay-panel">
+      <h1>Welcome Back!</h1>
+      <p>Already have an account? <br> Please log in to stay connected!</p>
+      <a class="ghost" (click)="onSwitchForm()">Log In</a>
+    </div>
     <form #authForm="ngForm" (ngSubmit)="onSignUp(authForm)">
       <h2>Create Account</h2>
         <input matInput id="username" type="text" ngModel name="username" placeholder="Username" #username="ngModel" required max="10">
         <input matInput id="email" type="email" ngModel name="email" placeholder="Email" #email="ngModel" required email>
         <input matInput id="password" type="password" ngModel name="password" placeholder="Password (min=6 characters)" #password="ngModel" required minlength="6">
       <button mat-raised-button color="accent" type="submit" [disabled]="authForm.invalid">Sign up</button>
-      <div class="switch-form">or <a class="switch-btn" (click)="onSwitchForm()">Login</a></div>
+      <div class="switch-form">or <a class="switch-btn" (click)="onSwitchForm()">Log in</a></div>
     </form>
   </div>
 
-
-  <div class="form-wrap login-wrap" *ngIf="isLogin">
-    <div class="overlay-panel overlay-right">
+  <div class="form-wrap" *ngIf="isLogin">
+    <div class="overlay-panel">
       <h1>Hello!</h1>
       <p>New to the site? <br> Go ahead and sign up to get the best experience.</p>
-      <button class="ghost" id="signup">Sign Up</button>
+      <a class="ghost" (click)="onSwitchForm()">Sign Up</a>
     </div>
     <form #authForm="ngForm" (ngSubmit)="onLogin(authForm)">
       <h2>Log in</h2>
@@ -27,16 +30,5 @@
       <div class="switch-form">or <a class="switch-btn" (click)="onSwitchForm()">Sign up</a></div>
     </form>
   </div>
-
-
-  <!-- <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <h1>Welcome Back!</h1>
-        <button id="login">Log In</button>
-      </div>
-
-    </div>
-  </div> -->
 
 </body>

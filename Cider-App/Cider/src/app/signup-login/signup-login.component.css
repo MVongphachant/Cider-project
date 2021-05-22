@@ -25,28 +25,20 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  /* height: auto; */
   min-height: 60%;
   width: 70%;
-  /* border: 3px solid grey; */
   border-radius: 10px;
   margin: 0 auto;
   top: 100px;
 }
 
 form {
-  /* border-radius: 10px; */
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 70%; */
-  /* min-height: 40%; */
-  /* margin: 0 auto; */
-  /* border: 3px solid grey; */
   padding: 0 3.5rem;
   width: 50%;
   left: 50%;
@@ -91,7 +83,8 @@ p {
   color: #fff;
   font-size: 1.2em;
   font-weight: 500;
-  margin: 50px 0 ;
+  margin: 50px 0;
+  line-height: 1.5em;
 }
 
 input {
@@ -123,19 +116,23 @@ input:focus {
 }
 
 button {
-  letter-spacing: 1.3px;
+  letter-spacing: 1.2px;
   cursor: pointer;
   text-transform: uppercase;
   padding: 3px 15px;
 }
 
-button.ghost {
+a.ghost {
   background: transparent;
   border: 2px solid #fff;
   border-radius: 5px;
   color: #fff;
   font-weight: 700;
   font-size: 1.3em;
+  padding: 5px 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
 @media only screen and (min-width: 768px) {
