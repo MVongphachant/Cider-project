@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators'
 
@@ -20,13 +21,15 @@ interface AuthResData {
 export class AuthService {
   user = new BehaviorSubject<User>(null);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private router: Router) { }
 
   signupUser(username: string, email: string, password: string) {
     const authData: AuthData = { username, email, password }
     this.http.post('http://localhost:3000/api/users/signup', authData)
       .subscribe(userData => {
         console.log(userData)
+        this.router.navigate(['/home'])
       })
   }
 
@@ -40,6 +43,7 @@ export class AuthService {
       }))
       .subscribe(userData => {
         console.log(userData)
+        this.router.navigate(['/home'])
       })
   }
 
